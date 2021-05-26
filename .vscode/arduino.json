@@ -1,5 +1,5 @@
 {
-    "sketch": "motion_recognition.ino",
+    "sketch": "motion_recognition_arduino.ino",
     "board": "arduino:avr:uno",
     "port": "COM12",
     "programmer": "arduino:avrisp"

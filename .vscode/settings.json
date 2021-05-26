@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "stepmotor.h": "c",
+        "arduino.h": "c"
+    }
+}

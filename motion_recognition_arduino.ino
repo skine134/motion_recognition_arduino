@@ -1,4 +1,3 @@
-
 #include <MotionRecognition.h>
 #include <SoftwareSerial.h>
 
@@ -7,15 +6,15 @@
 
 #define ROTATION_SIZE 0   //0 : FULL(1-1.8), 1 : HALF(1-0.9), 2 : QUART(1-0.45) [ Hz - angle ]
 #define DELAY_TIME 0.1    // 초 단위
-
+float test;
 String data;
 SoftwareSerial btSerial(TX_PIN, RX_PIN);
 MotionRecognition motionRecognition;
 void setup()
 {
   // Serial3.begin(115200);
-  btSerial.begin(115200);
-  motionRecognition.begin(ROTATION_SIZE);
+  btSerial.begin(9600);
+  motionRecognition.begin(ROTATION_SIZE,DELAY_TIME);
 }
 void loop()
 {
@@ -41,8 +40,8 @@ void loop()
    *   yaw 측정용
    *
    ****/
-  //  Serial.println("yaw : "+String(inputYaw,3));
-  motionRecognition.rotationStepMoter(data.substring(1,endIndex),DELAY_TIME);
+//  Serial.println("data : "+String(data.substring(1,endIndex).toFloat(),3));
+  motionRecognition.rotationStepMoter(data.substring(1,endIndex));
   /***
    * 데이터 처리후 data 초기화 
    */
