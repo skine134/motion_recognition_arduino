@@ -1,0 +1,7 @@
+{
+    "sketch": "motion_recognition.ino",
+    "configuration": "cpu=atmega2560",
+    "board": "arduino:avr:mega",
+    "port": "COM12",
+    "programmer": "arduino:avrisp"
+}
