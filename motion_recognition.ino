@@ -1,5 +1,9 @@
 #include <SoftwareSerial.h>
-SoftwareSerial mySerial(14,15);
+
+
+#define TX_PIN 2
+#define RX_PIN 3
+SoftwareSerial mySerial(TX_PIN, RX_PIN);
 
 void setup()
 {
